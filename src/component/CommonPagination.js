@@ -36,12 +36,12 @@ const CommonPagination = ({ pages, currentPage, setCurrentPage }) => {
         <div>
             <div className='d-flex align-items-center justify-content-center flex-wrap gap-2'>
                 <button
-                    className='bag-primary text-white border-0 rounded-3 p-2'
+                    className='bg-primary text-white border-0 rounded-3 p-2'
                     onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
                     disabled={currentPage === 1}
                 >Pre</button>
                 {currentPage > 3 && pages > 5 && (
-                    <button style={{ paddingLeft: 10, paddingRight: 10 }} className={`rounded-3 pt-2 pb-2 ${currentPage === 1 ? "bag-primary text-white border-0" : "bg-transparent border-1"}`} onClick={() => setCurrentPage(1)}>1</button>
+                    <button style={{ paddingLeft: 10, paddingRight: 10 }} className={`rounded-3 pt-2 pb-2 ${currentPage === 1 ? "bg-primary text-white border-0" : "bg-transparent border-1"}`} onClick={() => setCurrentPage(1)}>1</button>
                 )}
                 {currentPage > 3 && pages > 5 && <button className='bg-transparent border-1 rounded-3 p-2'>...</button>}
 
@@ -49,10 +49,10 @@ const CommonPagination = ({ pages, currentPage, setCurrentPage }) => {
 
                 {currentPage + 2 < pages && pages > 5 && <button className='bg-transparent border-1 rounded-3 p-2'>...</button>}
                 {currentPage + 2 < pages && pages > 5 && (
-                    <button style={{ paddingLeft: 10, paddingRight: 10 }} className={`rounded-3 pt-2 pb-2 ${currentPage === pages ? "bag-primary text-white border-0" : "bg-transparent border-1"}`} onClick={() => setCurrentPage(pages)}>{pages}</button>
+                    <button style={{ paddingLeft: 10, paddingRight: 10 }} className={`rounded-3 pt-2 pb-2 ${currentPage === pages ? "bg-primary text-white border-0" : "bg-transparent border-1"}`} onClick={() => setCurrentPage(pages)}>{pages}</button>
                 )}
                 <button
-                    className='bag-primary text-white border-0 rounded-3 p-2'
+                    className='bg-primary text-white border-0 rounded-3 p-2'
                     onClick={() => currentPage < pages && setCurrentPage(currentPage + 1)}
                     disabled={currentPage === pages}
                 >Next</button>
